@@ -12,18 +12,19 @@ class Stack(DoublyLinkedList):
         # self.storage = ?
 
     def push(self, value):
-        #add item to head 
-        self.add_to_head(value)
-        self.size+= 1
+        #add item to tail
+        self.add_to_tail(value)
+        # self.size+= 1
        
 
     def pop(self):
-        #remove item from head
-        self.remove_from_head()
-        self.size-=1
+        #remove last item in
+        self.remove_from_tail()
+        # self.size-=1
         
 
     def len(self):
+        self.size = self.length
         return self.size
 
   
@@ -34,8 +35,17 @@ s = Stack()
 s.push(1)
 s.push(2)
 s.push(3)
-print(s.len())
+s.push(4)
+print(s.get_max())
+print(s.len(), "length")
 s.pop()
-print(s.len())
+print(s.len(), "length")
 
 print(s.get_max())
+s.pop()
+s.pop()
+s.pop()
+
+print(s.len(), "length")
+
+
