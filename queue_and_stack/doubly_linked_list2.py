@@ -1,7 +1,3 @@
-"""Each ListNode holds a reference to its previous node
-as well as its next node in the List."""
-
-
 class ListNode:
     def __init__(self, value, prev=None, next=None):
         self.value = value
@@ -139,28 +135,16 @@ class DoublyLinkedList:
         current = self.head
         max_value = current.value
         while current is not None:
+            print(current.value, "current value in linked list")
             if current.value > max_value:
                 max_value = current.value
-            current = current.next 
+            current = current.next
+             
         return max_value
 
-
-
-node_1 = ListNode(1)
-node_2 = ListNode(2)
-node_3 = ListNode(3)
-
-print(node_1.value)
-
-my_list = DoublyLinkedList(node_1)
-# my_list = DoublyLinkedList(node_2)
-# my_list = DoublyLinkedList(node_3)
-
-node_4 = ListNode(4)
-my_list.add_to_tail(node_4)
-print(my_list.get_max())
-
-node_4 = ListNode(4)
-my_list.add_to_tail(node_4)
-# print(my_list.get_max())
-# print(my_list.get_max())
+    def in_linked_list(self):
+        current = self.head
+        while current is not None:
+            # current = current.next
+            print(current.value)
+        current = current.next
