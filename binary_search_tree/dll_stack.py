@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../doubly_linked_list')
-from doubly_linked_list2 import DoublyLinkedList
+from doubly_linked_list import DoublyLinkedList
 
 
 #last in first out 
@@ -37,26 +37,3 @@ class Stack:
     def len(self):
         # self.size = self.length
         return self.size
-
-  
-
-     
-
-# s = Stack()
-# s.push(1)
-# s.push(2)
-# s.push(3)
-# s.push(4)
-# print(s.get_max())
-# print(s.len(), "length")
-# s.pop()
-# print(s.len(), "length")
-
-# print(s.get_max())
-# s.pop()
-# s.pop()
-# s.pop()
-
-# print(s.len(), "length")
-
-
